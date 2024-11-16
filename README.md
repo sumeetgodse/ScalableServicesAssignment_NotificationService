@@ -1,0 +1,2 @@
+# ScalableServicesAssignment_NotificationService
+Notification Microservice
