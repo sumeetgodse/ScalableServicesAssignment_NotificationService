@@ -6,12 +6,15 @@
 
 - Clone this project
 - Run `npm install` (only for 1st time)
+- Run `npm start`
 - create a `.env` with following contents in project root
   `USERS_DATABASE_URL=mongodb://localhost:27017/serviceUsers`
+
   `NOTIFIER_EMAIL=SENDER_EMAIL_ID_HERE`
+
   `NOTIFIER_PASSWORD=APP_PASSWORD`
+
 - `NOTIFIER_PASSWORD` should be the app password created from https://myaccount.google.com/apppasswords
-- Run `npm start`
 
 #### App should now be running on `http://localhost:3006`
 
