@@ -24,13 +24,16 @@ router.post('/', async (req, res) => {
                 subject: `Scalable Services Order ID : ${req.body.orderId}`,
                 text: req.body.message,
             };
+            console.log(mailOptions)
             await transporter.sendMail(mailOptions);
             res.status(200).json({ message: "Notification Email SENT!" })
         } catch (err) {
             res.status(400).json({ message: "Notification Email FAILED!", errorMsg: err })
+            console.log(err)
         }
     } else {
         res.status(400).json({ message: "Notification Email FAILED!", errorMsg: 'USER DOES NOT EXIST!' })
+        console.log({ error: 'user does not exist' })
     }
 })
 
